@@ -25,7 +25,6 @@ from setuptools import setup
 from setuptools.command.install import install as InstallCommandBase
 from setuptools.dist import Distribution
 
-import reverb_version
 
 # Defaults if doing a release build.
 TENSORFLOW_VERSION = 'tensorflow~=2.12.0'
@@ -71,11 +70,11 @@ class SetupToolsHelper(object):
   def _get_version(self):
     """Returns the version and project name to associate with the build."""
     if self.release:
-      project_name = 'dm-reverb'
-      version = reverb_version.__rel_version__
+      project_name = 'dm-reverb-macos'
+      version = '0.11.0.dev'
     else:
-      project_name = 'dm-reverb-nightly'
-      version = reverb_version.__dev_version__
+      project_name = 'dm-reverb-macos-nightly'
+      version = '0.11.0'
       version += datetime.datetime.now().strftime('%Y%m%d')
 
     return version, project_name
@@ -120,7 +119,7 @@ class SetupToolsHelper(object):
         long_description_content_type='text/markdown',
         author='DeepMind',
         author_email='DeepMind <no-reply@google.com>',
-        url='https://github.com/deepmind/reverb',
+        url='https://github.com/engichang1467/reverb',
         license='Apache 2.0',
         packages=find_packages(),
         headers=list(find_files('*.proto', 'reverb')),
