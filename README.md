@@ -1,6 +1,6 @@
-# Reverb
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dm-reverb)
-[![PyPI version](https://badge.fury.io/py/dm-reverb.svg)](https://badge.fury.io/py/dm-reverb)
+# Reverb (MacOS)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dm-reverb-macos)
+[![PyPI version](https://badge.fury.io/py/dm-reverb-macos.svg)](https://badge.fury.io/py/dm-reverb-macos)
 
 Reverb is an efficient and easy-to-use data storage and transport system
 designed for machine learning research. Reverb is primarily used as an
@@ -25,7 +25,7 @@ LIFO, and priority queues.
 Please keep in mind that Reverb is not hardened for production use, and while we
 do our best to keep things in working order, things may break or segfault.
 
-> :warning: Reverb currently only supports Linux based OSes.
+> :warning: This Reverb currently only supports MacOS.
 
 The recommended way to install Reverb is with `pip`. We also provide instructions
 to build from source using the same docker images we use for releases.
@@ -34,21 +34,21 @@ TensorFlow can be installed separately or as part of the `pip` install.
 Installing TensorFlow as part of the install ensures compatibility.
 
 ```shell
-$ pip install dm-reverb[tensorflow]
+$ pip install dm-reverb-macos[tensorflow]
 
 # Without Tensorflow install and version dependency check.
-$ pip install dm-reverb
+$ pip install dm-reverb-macos
 ```
 
 ### Nightly builds
 
-[![PyPI version](https://badge.fury.io/py/dm-reverb-nightly.svg)](https://badge.fury.io/py/dm-reverb-nightly)
+[![PyPI version](https://badge.fury.io/py/dm-reverb-macos-nightly.svg)](https://badge.fury.io/py/dm-reverb-macos-nightly)
 
 ```shell
-$ pip install dm-reverb-nightly[tensorflow]
+$ pip install dm-reverb-macos-nightly[tensorflow]
 
 # Without Tensorflow install and version dependency check.
-$ pip install dm-reverb-nightly
+$ pip install dm-reverb-macos-nightly
 
 ```
 
@@ -375,7 +375,7 @@ for details on the implementation of checkpointing in Reverb.
 
 ## Starting Reverb using `reverb_server` (beta)
 
-Installing `dm-reverb` using `pip` will install a `reverb_server` script, which
+Installing `dm-reverb-macos` using `pip` will install a `reverb_server` script, which
 accepts its config as a textproto. For example:
 
 ```bash
